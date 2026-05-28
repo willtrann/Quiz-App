@@ -14,12 +14,12 @@ Backend API: https://quiz-app-backend-beta-khaki.vercel.app
 
 Player account:
 
-username: testuser
+username: testuser\
 password: testpassword
 
 Admin account:
 
-username: adminuser
+username: adminuser\
 password: adminpassword
 
 ---
