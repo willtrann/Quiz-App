@@ -4,6 +4,24 @@ This project is a full-stack single-player online quiz application built using t
 
 ---
 
+# Live Deployment
+
+Frontend: https://quiz-app-frontend-sigma-nine.vercel.app
+
+Backend API: https://quiz-app-backend-beta-khaki.vercel.app
+
+# Test Accounts
+
+Player account:
+username: testuser
+password: testpassword
+
+Admin account:
+username: adminuser
+password: adminpassword
+
+---
+
 # Features
 
 ## Player Features
