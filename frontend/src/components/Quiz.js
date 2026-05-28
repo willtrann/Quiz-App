@@ -37,9 +37,9 @@ function Quiz() {
     }
   };
 
-  useEffect(() => {
-    loadQuestions();
-  }, []);
+useEffect(() => {
+  loadQuestions();
+}, [loadQuestions]);
 
   const handleAnswerChange = (questionId, optionIndex) => {
     dispatch({

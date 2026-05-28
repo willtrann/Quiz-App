@@ -290,32 +290,6 @@ function Admin({ theme }) {
     return <h2>Access denied. Admins only.</h2>;
   }
 
-  const updateOption = (index, value) => {
-    const newOptions = [...form.options];
-    newOptions[index] = value;
-    setForm({ ...form, options: newOptions });
-  };
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    try {
-      if (editingId) {
-        await API.put(`/admin/questions/${editingId}`, form);
-        setMessage("Question updated");
-      } else {
-        await API.post("/admin/questions", form);
-        setMessage("Question created");
-      }
-
-      setForm(emptyForm);
-      setEditingId(null);
-      fetchQuestions();
-    } catch (err) {
-      setMessage(err.response?.data?.error || "Save failed");
-    }
-  };
-
     const handleEdit = (question) => {
         setEditingId(question._id);
 
