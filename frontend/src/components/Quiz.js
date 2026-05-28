@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useCallback } from "react";
 import { Link } from "react-router-dom";
 import { getQuizQuestions, submitQuiz } from "../api/quizApi";
 import { useQuiz } from "../context/QuizContext";
@@ -16,7 +16,7 @@ function Quiz() {
     error,
   } = state;
 
-  const loadQuestions = async () => {
+  const loadQuestions = useCallback(async () => {
     try {
       dispatch({ type: "LOAD_START" });
 
@@ -35,7 +35,7 @@ function Quiz() {
           "Failed to load quiz questions",
       });
     }
-  };
+  }, [dispatch]);
 
 useEffect(() => {
   loadQuestions();
