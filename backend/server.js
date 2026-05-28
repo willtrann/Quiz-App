@@ -17,9 +17,13 @@ const app = express();
 app.disable("x-powered-by");
 
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: [
+    "http://localhost:3000",
+    "https://quiz-app-frontend-sigma-nine.vercel.app",
+  ],
   methods: ["GET", "POST", "PUT", "PATCH", "DELETE", "OPTIONS"],
   allowedHeaders: ["Content-Type", "Authorization"],
+  credentials: true,
 };
 
 app.use(helmet());
